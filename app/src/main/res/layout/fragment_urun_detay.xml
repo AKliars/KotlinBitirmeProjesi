@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.UrunDetayFragment" >
+
+    <ImageView
+        android:id="@+id/urunDetayResim"
+        android:layout_width="183dp"
+        android:layout_height="378dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvUrunAdi"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/audiowide"
+        android:text="Ürün Adı"
+        android:textAlignment="viewStart"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/urunDetayResim" />
+
+    <TextView
+        android:id="@+id/tvUrunDetayUrunAciklamasi"
+        android:layout_width="163dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_alternates_light"
+        android:text="5₺"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUrunAdi" />
+
+    <TextView
+        android:id="@+id/tvMiktar"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:fontFamily="@font/montserrat_alternates_light"
+        android:text="1"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMiktarArttir"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toEndOf="@+id/buttonMiktarAzalt"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/buttonMiktarArttir"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/orange"
+        android:padding="0dp"
+        android:text="+"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvUrunDetayUrunAciklamasi"
+        app:layout_constraintTop_toTopOf="@+id/tvMiktar" />
+
+    <Button
+        android:id="@+id/buttonMiktarAzalt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/sari"
+        android:padding="0dp"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="@+id/tvUrunDetayUrunAciklamasi"
+        app:layout_constraintTop_toTopOf="@+id/tvMiktar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/yemek_anim"
+        app:lottie_url="REPLACE_JSON_URL"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonSepeteEkle"
+        android:layout_width="184dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/orange"
+        android:elevation="24dp"
+        android:fontFamily="@font/audiowide"
+        android:padding="0dp"
+        android:text="SEPETE EKLE"
+        android:textAlignment="center"
+
+        app:cornerRadius="5dp"
+        app:icon="@drawable/baseline_shopping_cart_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@color/sari"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvUrunDetayUrunAciklamasi"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/urunDetayResim" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="99dp"
+        android:layout_height="58dp"
+        android:background="@color/sari"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="Ürün Tutarı"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewUDToplam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewUDToplam" />
+
+    <TextView
+        android:id="@+id/textViewUDToplam"
+        android:layout_width="113dp"
+        android:layout_height="58dp"
+        android:background="@color/sari"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="0 ₺"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonSepeteEkle"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSepeteEkle"
+        app:layout_constraintTop_toTopOf="@+id/buttonSepeteEkle" />
+
+    <Button
+        android:id="@+id/buttonGeri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/cardview_shadow_end_color"
+        android:padding="0dp"
+        android:textColor="@color/black"
+        app:icon="@drawable/baseline_arrow_back_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="32dp"
+        app:iconTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:text="Miktar"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvUrunDetayUrunAciklamasi"
+        app:layout_constraintTop_toBottomOf="@+id/tvUrunDetayUrunAciklamasi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

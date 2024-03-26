@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="5dp"
+        android:padding="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvYemekAdi"
+                android:layout_width="137dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/audiowide"
+                android:text="TextView"
+                android:textSize="24sp"
+                app:layout_constraintStart_toEndOf="@+id/sepetUrunResim"
+                app:layout_constraintTop_toTopOf="@+id/sepetUrunResim" />
+
+            <TextView
+                android:id="@+id/tvSepetUrunFiyat"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/audiowide"
+                android:gravity="center"
+                android:text="5₺"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvYemekAdi" />
+
+            <Button
+                android:id="@+id/sepetBtnAzalt"
+                android:layout_width="60dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="24dp"
+                android:backgroundTint="@color/sari"
+                android:text="-"
+                app:circularflow_defaultRadius="15dp"
+                app:cornerRadius="15dp"
+                app:layout_constraintStart_toEndOf="@+id/sepetUrunResim"
+                app:layout_constraintTop_toTopOf="@+id/tvSepetMiktar" />
+
+            <Button
+                android:id="@+id/sepetBtnArttır"
+                android:layout_width="67dp"
+                android:layout_height="52dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/sari"
+                android:text="+"
+                app:cornerRadius="15dp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonSil"
+                app:layout_constraintTop_toTopOf="@+id/tvSepetMiktar" />
+
+            <TextView
+                android:id="@+id/tvSepetMiktar"
+                android:layout_width="38dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_alternates_light"
+                android:gravity="center"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/sepetBtnArttır"
+                app:layout_constraintStart_toEndOf="@+id/sepetBtnAzalt"
+                app:layout_constraintTop_toBottomOf="@+id/tvYemekAdi" />
+
+            <ImageView
+                android:id="@+id/sepetUrunResim"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <Button
+                android:id="@+id/buttonSil"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/white"
+                android:padding="0dp"
+                android:textAlignment="center"
+                app:icon="@drawable/baseline_delete_24"
+                app:iconPadding="0dp"
+                app:iconSize="30dp"
+                app:iconTint="@color/red"
+                app:layout_constraintBottom_toBottomOf="@+id/sepetBtnArttır"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/sepetBtnArttır"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
